@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>System - Deny by Referer</name>
+	<author>Aaron Navarro</author>
+	<creationDate>January 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>marxianu@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>Deny traffic from specified referers</description>
+	<files>
+		<filename plugin="denyreferer">denyreferer.php</filename>
+	</files>
+	<params>
+		<param name="deny_method" type="radio" default="0" label="Deny method" description="Forbidden: Deny access with a HTTP/403. Redirect back: Redirect back to referer URL.">
+			<option value="0">Forbidden</option>
+			<option value="1">Redirect back</option>
+		</param>
+		<param name="check_admin" type="radio" default="0" label="Check on admin" description="Whether to check for denied referers on the administrator.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="domains" type="textarea" default="" label="Domains" description="Referer domains. One per line." cols="40" rows="30" />
+		<param name="urls" type="textarea" default="" label="URLs" description="Referer URLs. One per line." cols="40" rows="30" />
+	</params>
+</install>
